@@ -19,10 +19,11 @@ class Board {
 
   void select(int x, int y){
     AbstractKoma koma = komaList.getSelectedKoma();
-    if(koma == null){
+    if(koma==null){
       komaList.select(x,y);
     }else{
-      koma.kStat.selected = false;
+      koma.move(x,y);
+      koma.kStat.selected=false;
     }
   }
 }
